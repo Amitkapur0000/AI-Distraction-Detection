@@ -1,0 +1,26 @@
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.tree import DecisionTreeClassifier
+
+# Load dataset
+df = pd.read_csv("dataset.csv")
+
+# Split data
+X = df[["study_time", "phone_usage", "app_switches", "idle_time"]]
+y = df["distracted"]
+
+# Train model
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
+
+model = DecisionTreeClassifier()
+model.fit(X_train, y_train)
+
+# Test input
+sample = [[3, 4, 9, 18]]
+
+result = model.predict(sample)
+
+if result[0] == 1:
+    print("Student is Distracted 😵")
+else:
+    print("Student is Focused 📚")

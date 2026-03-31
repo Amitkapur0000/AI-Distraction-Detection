@@ -1,0 +1,7 @@
+study_time,phone_usage,app_switches,idle_time,distracted
+2,5,10,20,1
+5,1,2,5,0
+1,6,12,25,1
+6,0,1,3,0
+3,4,8,15,1
+7,0,1,2,0
