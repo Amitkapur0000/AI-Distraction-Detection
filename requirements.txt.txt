@@ -1,2 +1,4 @@
-pandas
-scikit-learn
+streamlit
+opencv-python-headless
+ultralytics
+numpy
